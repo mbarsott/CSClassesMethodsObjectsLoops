@@ -21,6 +21,10 @@ namespace CSClassesMethodsObjectsLoops
         public void Announce()
         {
             Console.WriteLine("Welcome " + Name + " to the stage!");
+            foreach (var musician in Musicians)
+            {
+                musician.Announce();
+            }
         }
     }
 }
