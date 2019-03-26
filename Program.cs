@@ -22,6 +22,19 @@ namespace CSClassesMethodsObjectsLoops
                 {
                     band.AddMusician();
                 }
+                else if (action.StartsWith("add"))
+                {
+                    var arguments = action.Split(' ');
+                    if (arguments.Length == 3)
+                    {
+                        band.AddMusician(arguments[1].Substring(0, 1).ToUpper() + arguments[1].Substring(1),
+                            arguments[2]);
+                    }
+                    else
+                    {
+                        band.AddMusician();
+                    }
+                }
                 else if (action == "announce")
                 {
                     band.Announce();

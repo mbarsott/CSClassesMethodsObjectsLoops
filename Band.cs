@@ -10,11 +10,22 @@ namespace CSClassesMethodsObjectsLoops
 
         public void AddMusician()
         {
-            var musician = new Musician();
+//            var musician = new Musician();
             Console.WriteLine("What is the name of the musician to be added?");
-            musician.Name = Console.ReadLine();
-            Console.WriteLine("What instrument does " + musician.Name + " play?");
-            musician.Instrument = Console.ReadLine();
+//            musician.Name = Console.ReadLine();
+            var name = Console.ReadLine();
+//            Console.WriteLine("What instrument does " + musician.Name + " play?");
+            Console.WriteLine("What instrument does " + name + " play?");
+//            musician.Instrument = Console.ReadLine();
+            var instrument = Console.ReadLine();
+            AddMusician(name, instrument);
+        }
+
+        public void AddMusician(string name, string instrument)
+        {
+            var musician = new Musician();
+            musician.Name = name;
+            musician.Instrument = instrument;
             Musicians.Add(musician);
         }
 
